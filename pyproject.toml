@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "elen-toolkit-flask"
+version = "0.1.0"
+description = ""
+authors = ["kleber-code <kleber.code@gmail.com>"]
+readme = "README.md"
+packages = [{include = "elen_toolkit_flask"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.2.3"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

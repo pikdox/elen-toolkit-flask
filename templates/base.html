@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>EllenToolkit</title>
-    <link rel="manifest" href="/static/etk/manifest.json">
+    <link rel="manifest" href="/static/manifest.json">
 </head>
 <style>
     body {
@@ -101,4 +101,15 @@
         <h2><a href="">kleber-code(github)</a></h2>
     </footer>
 </body>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/static/sw.js').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+</script>
 </html>
