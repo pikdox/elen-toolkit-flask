@@ -1,0 +1,56 @@
+{% extends "etk_base.html" %}
+
+{% block css %}
+<style>
+    .container {
+        max-width: 600px;
+        width: 100%;
+        height: 100%;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+    .buttons_container {
+        flex-grow: 1;
+        text-align: justify;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 10px;
+        padding: 10px;
+    }
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        padding: 10px 10px;
+        border: none;
+        background-color: #0077cc;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    }
+    .button:hover {
+        background-color: #005ea6;
+        cursor: pointer;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Olá, {{ name }}.</h1>
+    <div class="buttons_container">
+        <a href="imc" class="button" draggable="false">IMC</a>
+        <a href="#" class="button" draggable="false">...</a>
+        <a href="#" class="button" draggable="false">...</a>
+        <a href="#" class="button" draggable="false">...</a>
+        <a href="#" class="button" draggable="false">...</a>
+        <a href="logout" class="button" draggable="false">Sair</a>
+    </div>
+</div>
+{% endblock %}

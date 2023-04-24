@@ -1,0 +1,78 @@
+{% extends "etk_base.html" %}
+
+{% block css %}
+<style>
+    .container {
+        max-width: 600px;
+        width: 100%;
+        height: 100%;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 5px;
+    }
+    label {
+        font-size: large;
+    }
+    input {
+        padding: 10px;
+        font-size: larger;
+    }
+    #submit_button {
+        background-color: #0077cc;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+    }
+    #result {
+        text-align: center;
+        padding: 10px;
+        background-color: rgb(7, 179, 128);
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+    }
+    #sutil {
+        text-align: center;
+        opacity: 0.05;
+    }
+    #sutil:hover {
+        opacity: 1;
+        transition: 5s;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Calcular IMC</h1>
+    {% if imc_result %}
+    <h2 id="result">Seu IMC é {{ imc_result[0] }} ({{ imc_result[1] }}).</h2>
+    <p id="sutil">{{imc_result[2]}}</p>
+    {% endif %}
+    <form method="POST">
+        <label for="genre">Gênero:</label>
+        <div>
+            <input type="radio" name="genre" id="male" value="male" checked>
+            <label for="male">Masculino</label>
+            <input type="radio" name="genre" id="female" value="female">
+            <label for="male">Feminino</label>
+        </div>
+        <br>
+        <label for="age">Idade:</label>
+        <input type="number" name="age" required value="{{ age }}">
+        <br>
+        <label for="weight">Peso (kg):</label>
+        <input type="number" name="weight" step="0.01" required value="{{ weight }}">
+        <br>
+        <label for="height">Altura (m):</label>
+        <input type="number" name="height" step="0.01" required value="{{ height }}">
+        <br>
+        <input type="submit" id="submit_button" value="Calcular">
+    </form>
+</div>
+{% endblock %}

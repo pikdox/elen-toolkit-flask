@@ -1,0 +1,55 @@
+{% extends "etk_base.html" %}
+
+{% block css %}
+<style>
+    .container {
+        max-width: 600px;
+        width: 100%;
+        height: 100%;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 5px;
+    }
+    label {
+        font-size: large;
+    }
+    input {
+        padding: 10px;
+        font-size: larger;
+    }
+    #submit_button {
+        background-color: #0077cc;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+    }
+    a {
+        text-decoration: none;
+        color: #3e77cd;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Criar Conta</h1>
+    <form method="POST">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required placeholder="digite seu nome aqui" autocomplete="name" autofocus>
+        <br>
+        <label for="username">Matrícula: (12 digitos)</label>
+        <input type="number" id="username" name="username" required min="99999999999" max="999999999999" placeholder="digite aqui sua matrícula (12 digitos)" autocomplete="username">
+        <br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required minlength="4" placeholder="digite aqui sua senha" autocomplete="new-password">
+        <br>
+        <input type="submit" id="submit_button" value="Cadastrar">
+    </form>
+    <a href="login">Tem uma conta? entrar aqui.</a>
+</div>
+{% endblock %}

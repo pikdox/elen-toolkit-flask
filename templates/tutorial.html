@@ -1,0 +1,68 @@
+{% extends "etk_base.html" %}
+
+{% block css %}
+<style>
+    .container {
+        max-width: 600px;
+        width: 100%;
+        height: 100%;
+        text-align: justify;
+    }
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin: 20px;
+    }
+    p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin: 20px;
+        padding: 15px;
+        box-sizing: border-box;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    ol {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin: 20px;
+        padding: 40px;
+        box-sizing: border-box;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="float-container">
+        <h1>Seja bem-vindo</h1>
+        <p>Olá, seja bem-vindo ao nosso site! Nós somos uma PWA (Progressive Web App), o que significa que podemos oferecer uma experiência semelhante à de um aplicativo, mas diretamente no seu navegador.</p>
+        <p>Você pode nos instalar como se fossemos um aplicativo nativo, e aproveitar todas as vantagens de uma PWA. Alguns exemplos são: não precisar baixar nada da loja de aplicativos, funcionar mesmo sem conexão com a internet e ter atualizações automáticas sem precisar fazer nada.</p>
+        <p>Se você quiser instalar nossa PWA, basta seguir estes passos simples:</p>
+        <ol>
+            <li>Abra este site em seu navegador.</li>
+            <li>Procure os 3 pontinhos para abrir o menu do navegor</li>
+            <li>Procure pelo botão "Adicionar à tela inicial" ou "Instalar app".</li>
+            <li>Clique nele e siga as instruções na tela.</li>
+            <li>Pronto! Agora você pode acessar nosso site como se fosse um aplicativo, diretamente da tela inicial do seu dispositivo.</li>
+        </ol>
+        <p>E para usar nossa PWA, é só clicar no ícone que apareceu na sua tela inicial e aproveitar todas as funcionalidades.</p>
+        <p>Esperamos que tenha gostado de conhecer um pouco mais sobre PWAs e que possa aproveitar ao máximo nossa PWA. Qualquer dúvida, não hesite em entrar em contato conosco.</p>
+    </div>
+</div>
+{% endblock %}

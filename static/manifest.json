@@ -1,0 +1,21 @@
+{
+    "name": "Elen Toolkit",
+    "short_name": "ETk",
+    "description": "This is a simple example of a Progressive Web App.",
+    "icons": [
+        {
+            "src": "/static/etk/icon192x.jpg",
+            "sizes": "192x192",
+            "type": "image/jpg"
+        },
+        {
+            "src": "/static/etk/icon512x.jpg",
+            "sizes": "512x512",
+            "type": "image/jpg"
+        }
+    ],
+    "start_url": "/etk/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000"
+}

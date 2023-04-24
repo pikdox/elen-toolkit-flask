@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EllenToolkit</title>
+    <link rel="manifest" href="/static/etk/manifest.json">
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #F6F6F6;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #444444;
+        padding: 10px;
+    }
+
+    nav a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        padding: 10px 20px;
+        border: none;
+        background-color: #0077cc;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+        margin-right: 10px;
+    }
+
+    nav a:last-of-type {
+        margin-right: 0;
+    }
+
+    nav a:hover {
+        background-color: #005ea6;
+        cursor: pointer;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        padding: 10px;
+    }
+    footer {
+        background-color: #333;
+        color: #999;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer a {
+        text-decoration: none;
+        color: #999;
+    }
+</style>
+{% block css %}
+{% endblock %}
+<body>
+    <header>
+        <h1>Elen Toolkit</h1>
+    </header>
+    <nav>
+        <a href="tutorial">Tutorial</a>
+        <a href="home">Home</a>
+        <a href="login">Login</a>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <h2><a href="">kleber-code(github)</a></h2>
+    </footer>
+</body>
+</html>
