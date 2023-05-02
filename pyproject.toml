@@ -8,7 +8,7 @@ packages = [{include = "elen_toolkit_flask"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-Flask = "^2.2.3"
+Flask = "^2.3.2"
 python-dotenv = "^1.0.0"
 
 
